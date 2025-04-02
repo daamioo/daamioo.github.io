@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: SISK - Projekty
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Wrzystkie Projekty</h1>
+    <ul>
+      {% for post in collections.projects | reverse %}
+        <li>
+          <a href="/projects/{{ post.fileSlug }}/">{{ post.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+<nav class="navbar is-spaced is-white" role="navigation" aria-label="main navigation"
+{% if color is defined %}
+style="background-color:#{{color}};"
+{% endif %}
+>
+  <div class="navbar-brand">
+      <a class="navbar-item" href="https://sisk.kssk.pwr.edu.pl/">
+        <img src="/assets/media/branding/text_alpha_black.png">
+      </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <div class="navbar-item  is-hoverable">
+          <a class="navbar-link is-arrowless" href="/about">
+            O Nas
+          </a>
+          
+
+        </div>
+        <div class="navbar-item  is-hoverable">
+          <a class="navbar-link ">
+            Projekty
+          </a>
+          <div class="navbar-dropdown">
+
+      {% for post in collections.projects | reverse %}
+          <a class="navbar-item has-text-bigfiat" href="/projects/{{ post.fileSlug }}">
+                {{ post.data.title }}
+</a>
+      {% endfor %}
+
+            <hr class="dropdown-divider">
+
+            <a class="navbar-item" href="/projects">
+              Archiwum projektów
+</a>          </div>
+        </div>
+
+        <div class="navbar-item  is-hoverable">
+          <a class="navbar-link is-arrowless" href="/statute">Statut</a>
+        </div>
+
+      </div>
+
+    <div class="navbar-end">
+    
+
+
+
+
+      <div class="navbar-item is-hoverable">
+        <div class="button is-primary is-hovered">
+          <span>Wydarzenia</span>
+                    <div class="navbar-dropdown">
+            <hr class="dropdown-divider">
+
+            <a href="https://isw.kssk.pwr.edu.pl" target="_blank">
+              <span class="icon is-big">
+              <i class="fa-solid fa-head-side"></i>
+              </span>
+              <span>
+              ISW
+              </span>
+            </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary is-outlined" href="/login">Zaloguj</a>
+            </div>
+          </div>
+    </div>
+  </div>
+</nav>

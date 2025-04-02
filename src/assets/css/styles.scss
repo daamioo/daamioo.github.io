@@ -1,0 +1,23 @@
+// Use Bulma with custom variables
+// Set your brand colors
+$brand: #2196f3;
+$linkzz: #22F2CA;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+@use "bulma/sass" with (
+
+  $primary: $brand,
+  $link: $linkzz,
+);
+
+// Import Bulma themes
+@use "bulma/sass/themes/light";
+@use "bulma/sass/themes/setup";
+
+// Apply the light theme
+:root {
+  @include light.light-theme;
+  @include setup.setup-theme;
+}
+

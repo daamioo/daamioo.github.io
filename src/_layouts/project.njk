@@ -1,0 +1,70 @@
+---
+layout: base.njk
+---
+
+
+  <div class="hero is-bigfiat is-medium " style="background-color:#{{ color }}">
+  
+	<div class="hero-body">
+		<div class="container">
+			<div class="columns is-centered">
+				<div class="column is-half">
+					<center class="is-1 subtitle mb-5">
+						<i class="is-small fas fa-route" aria-hidden="true"></i>
+					</center>
+					<center class="is-1 subtitle mb-5">
+						{{ title }}
+					</center>
+					<center class="is-1-desktop is-2-tablet is-3-mobile title mb-5">
+
+{{description}}					</center>
+
+					<center>
+
+							<span class="is-hidden-mobile tag is-medium is-bigfiat is-light has-text-bigfiat">
+								Kierownik:
+								{{ projectCordinator }}
+							</span>
+							<span class="is-hidden-desktop is-hidden-tablet tag is-medium is-bigfiat is-light has-text-bigfiat">
+								Kierownik:
+								{{ projectCordinator }}
+							</span>
+							
+							
+
+						
+
+					</center>
+						<center class="mt-2">
+							<span class="tag is-small is-bigfiat">{{ startDate }}</span>—
+							<span class="tag is-small is-bigfiat">{{ endDate }}</span>
+						</center>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+<progress class="progress" value="{{ progress }}" max="100" style="--bulma-progress-value-background-color:#{{color}}">
+  {{ progress }}%
+</progress>
+
+	<div class="hero">
+	<div class="hero-body">
+		<div class="container">
+				<p class="title">
+	<i class="fas fa-project-diagram" aria-hidden="true"></i>
+	<span>Opis projektu</span>
+</p>
+
+				<div class="box">
+					<div class="content is-medium">
+            {{ content | safe }}
+					</div>
+				</div>
+		</div>
+	</div>
+	</div>
+

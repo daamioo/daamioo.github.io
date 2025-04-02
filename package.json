@@ -1,0 +1,20 @@
+{
+  "name": "sisk.kssk.pwr.edu.pl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx @11ty/eleventy --serve",
+    "sass": "sass   --style=compressed --no-source-map --load-path=node_modules src/assets/css/styles.scss src/assets/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "bulma": "^1.0.3",
+    "sass": "^1.85.1"
+  }
+}

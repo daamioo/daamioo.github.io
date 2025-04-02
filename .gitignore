@@ -1,0 +1,8 @@
+src/assets/css/*.css
+_site/
+
+
+node_modules/
+package-lock.json
+.vscode
+.DS_Store
